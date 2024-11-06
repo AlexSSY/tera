@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   root "pages#index"
 
   resource :session, only: %i[ new create destroy ]
-  resource :profile, only: %i[ edit update ]
+  resource :profile, only: %i[ edit update ] do
+    get :password, action: :edit_password, as: :edit_password
+    post :password, action: :update_password
+  end
 end

@@ -16,6 +16,7 @@
         <% if user_signed_in? %>
           <div>Welcome back <%= current_user.email %> !</div>
           <%= link_to "edit profile", edit_profile_path %>
+          <%= link_to "change password", edit_password_profile_path %>
           <%= button_to "logout", session_path, method: :delete %>
         <% else %>
           <%= link_to "login", new_session_path %>

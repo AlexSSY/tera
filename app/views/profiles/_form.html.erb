@@ -1,0 +1,14 @@
+<%= simple_form_for current_user, url: profile_path, html: { multipart: true }, method: :patch do |f| %>
+  <%= f.input :email %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :phone_number %>
+  <%= f.input :address %>
+  <% if current_user.avatar.attached? && !current_user.avatar.new_record? %>
+    <%= image_tag url_for(current_user.avatar), alt: "User Avatar" %>
+  <% else %>
+    <p>No avatar uploaded.</p>
+  <% end %>
+  <%= f.input :avatar, as: :file, label: "Upload Avatar" %>
+  <%= f.button :submit %>
+<% end %>
