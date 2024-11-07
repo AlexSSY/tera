@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     get :password, action: :edit_password, as: :edit_password
     post :password, action: :update_password
   end
+  resources :coins, only: %i[ index ]
+  resource :register, only: %i[ new create ]
 end

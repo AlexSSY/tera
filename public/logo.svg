@@ -1,0 +1,13 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circle -->
+  <circle cx="20" cy="20" r="18" fill="none" stroke="#4A90E2" stroke-width="2" />
+
+  <!-- Inner Circle Coin Shape -->
+  <circle cx="20" cy="20" r="10" fill="#4A90E2" />
+
+  <!-- Diagonal Graph Lines -->
+  <line x1="14" y1="26" x2="26" y2="14" stroke="white" stroke-width="2" />
+  <circle cx="18" cy="22" r="1.5" fill="white" />
+  <circle cx="22" cy="18" r="1.5" fill="white" />
+</svg>
+  

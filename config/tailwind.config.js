@@ -5,12 +5,15 @@ module.exports = {
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.{erb,haml,html,slim}',
+    './app/helpers/application_helper.rb',
+    './config/initializers/simple_form.rb',
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', 'sans-serif'],     // Default font stack for body text
+        heading: ['Poppins', 'sans-serif'] // Custom font stack for headings
       },
     },
   },

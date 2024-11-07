@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if !!@user
       login @user
-      redirect_to root_path
+      redirect_to root_path, notice: "You are logged in successfully."
     else
       @user = User.new
       @user.errors.add(:email, "incorrect")
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to new_session_path
+    redirect_to new_session_path, notice: "You are logged out successfully."
   end
 
   private

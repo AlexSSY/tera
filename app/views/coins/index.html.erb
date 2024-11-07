@@ -1,0 +1,19 @@
+<div class="grid grid-cols-3 gap-4 p-4 border border-gray-200 rounded-md shadow-md w-full">
+  <!-- Table Headers -->
+  <div class="font-semibold text-gray-700">Icon</div>
+  <div class="font-semibold text-gray-700">Tag</div>
+  <div class="font-semibold text-gray-700">Name</div>
+
+  <% @coins.each do |coin| %>
+    <!-- Row -->
+    <div class="flex items-center">
+      <img width="32" src="<%= url_for coin.icon %>">
+    </div>
+    <div class="text-gray-800 uppercase"><%= coin.tag %></div>
+    <div class="text-gray-800"><%= coin.name %></div>
+  <% end %>
+</div>
+
+<div class="mt-12 flex justify-center">
+  <%== pagy_nav(@pagy) %>
+</div>
