@@ -14,9 +14,9 @@
       <nav class="flex space-x-6">
         <a href="/" class="text-gray-800 hover:text-blue-600 font-semibold">Home</a>
         <a href="#" class="text-gray-800 hover:text-blue-600 font-semibold">Trading</a>
-        <a href="#" class="text-gray-800 hover:text-blue-600 font-semibold">Market</a>
+        <a href="#" class="text-gray-800 hover:text-blue-600 font-semibold">Markets</a>
         <a href="<%= url_for coins_path %>" class="text-gray-800 hover:text-blue-600 font-semibold">Coins</a>
-        <a href="#" class="text-gray-800 hover:text-blue-600 font-semibold">NFT</a>
+        <a href="<%= url_for nfts_path %>" class="text-gray-800 hover:text-blue-600 font-semibold">NFT</a>
       </nav>
       
     </div>
@@ -25,8 +25,8 @@
     <div class="flex items-center space-x-4">
       
       <!-- Search Input -->
-      <div class="relative">
-        <input type="text" placeholder="Search..." class="w-48 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600">
+      <div class="relative" data-controller="search">
+        <input data-search-target="input" type="text" placeholder="Search..." class="w-48 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600">
       </div>
 
       <% if user_signed_in? %>
@@ -87,7 +87,7 @@
       <% else %>
 
         <%= link_to 'Login', new_session_path, class: 'text-blue-500 hover:underline' %>
-        <%= link_to 'Register', new_register_path, class: 'border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-4 py-2 rounded-md' %>
+        <%= link_to 'Sign Up', new_register_path, class: 'bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition' %>
 
       <% end %>
     </div>

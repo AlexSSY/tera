@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  [data-controller="news-ticker"] .inline-block {
+    animation: marquee 15s linear infinite;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-slide {
+    display: flex;
+    animation: slide 20s linear infinite;
+  }

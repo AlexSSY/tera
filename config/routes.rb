@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root "pages#index"
+  get "/terms", to: "pages#terms", as: :terms
+  get "/privacy", to: "pages#privacy", as: :privacy
+  get "/search", to: "pages#search", as: :search
 
   resource :session, only: %i[ new create destroy ]
   resource :profile, only: %i[ edit update ] do
@@ -13,4 +16,5 @@ Rails.application.routes.draw do
   end
   resources :coins, only: %i[ index ]
   resource :register, only: %i[ new create ]
+  resources :nfts, only: %i[ index ]
 end

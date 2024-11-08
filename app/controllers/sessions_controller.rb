@@ -11,8 +11,8 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: "You are logged in successfully."
     else
       @user = User.new
-      @user.errors.add(:email, "incorrect")
-      @user.errors.add(:password, "incorrect")
+      @user.errors.add(:email, "incorrect email")
+      @user.errors.add(:password, "incorrect password")
       render :new, status: :unprocessable_entity
     end
   end

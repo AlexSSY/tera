@@ -42,13 +42,13 @@
 
     <!-- Column 3: Services Section -->
     <div>
-      <h3 class="text-primary-500 font-semibold mb-4">Services</h3>
+      <h3 class="text-primary-500 font-semibold mb-4">Pairs</h3>
       <ul class="space-y-2">
-        <li><a href="#" class="hover:text-primary-400">Crypto Trading</a></li>
-        <li><a href="#" class="hover:text-primary-400">Staking Services</a></li>
-        <li><a href="#" class="hover:text-primary-400">API Trading</a></li>
-        <li><a href="#" class="hover:text-primary-400">Affiliate Program</a></li>
-        <li><a href="#" class="hover:text-primary-400">Professional Trading</a></li>
+        <li><a href="#" class="hover:text-primary-400">BTC/USDT</a></li>
+        <li><a href="#" class="hover:text-primary-400">ETH/USDT</a></li>
+        <li><a href="#" class="hover:text-primary-400">DOGE/USDT</a></li>
+        <li><a href="#" class="hover:text-primary-400">SOL/USDT</a></li>
+        <li><a href="#" class="hover:text-primary-400">GRASS/USDT</a></li>
       </ul>
     </div>
 
@@ -72,8 +72,8 @@
       <p>&copy; <%= Time.now.year %> CryptoTrade. All rights reserved.</p>
         <div class="mx-8"></div>
       <div class="flex space-x-4 mt-2 md:mt-0">
-        <a href="#" class="hover:text-gray-200">Terms of Service</a>
-        <a href="#" class="hover:text-gray-200">Privacy Terms</a>
+        <a href="<%= url_for terms_path %>" class="hover:text-gray-200">Terms of Service</a>
+        <a href="<%= url_for privacy_path %>" class="hover:text-gray-200">Privacy Terms</a>
       </div>
     </div>
   </div>

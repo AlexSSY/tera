@@ -1,0 +1,44 @@
+<section class="py-12 bg-white mb-8" data-controller="counter">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Row 1: 4 Columns with Animated Numbers -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8" data-counter-target="stats">
+      <!-- Column 1: 24H Trading Volume -->
+      <div class="bg-white text-start">
+        <div class="text-2xl font-bold text-blue-600">
+          <span class="counter-number" data-counter-target="number1">0</span>
+        </div>
+        <p class="text-sm text-gray-600">24H Trading Volume</p>
+      </div>
+
+      <!-- Column 2: Cryptocurrencies Listed -->
+      <div class="bg-white text-start">
+        <div class="text-2xl font-bold text-blue-600">
+          <span class="counter-number" data-counter-target="number2">0</span>
+        </div>
+        <p class="text-sm text-gray-600">Cryptocurrencies Listed</p>
+      </div>
+
+      <!-- Column 3: Registered Users -->
+      <div class="bg-white text-start">
+        <div class="text-2xl font-bold text-blue-600">
+          <span class="counter-number" data-counter-target="number3">0</span>
+        </div>
+        <p class="text-sm text-gray-600">Registered Users</p>
+      </div>
+
+      <!-- Column 4: Supported Countries -->
+      <div class="bg-white text-start">
+        <div class="text-2xl font-bold text-blue-600">
+          <span class="counter-number" data-counter-target="number4">0</span>
+        </div>
+        <p class="text-sm text-gray-600">Supported Countries</p>
+      </div>
+    </div>
+
+    <!-- Row 2: Sign Up Button -->
+    <div class="text-start">
+      <a class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700" href="<%= url_for new_register_path %>">Sign Up</a>
+    </div>
+  </div>
+</section>

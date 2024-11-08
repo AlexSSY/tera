@@ -1,1 +1,68 @@
-<h1>Hello world</h1>
+<section class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header and Subheader -->
+    <h2 class="text-4xl font-bold mb-4">Take your chance on CryptoTrade</h2>
+    <p class="text-xl mb-6">Vote for your candidate to achieve bonus</p>
+    
+    <!-- Call to Action Text -->
+    <p class="text-lg text-blue-300 mb-8">Register and take your 200 USDT bonus</p>
+    
+    <!-- Buttons -->
+    <div class="flex space-x-4 mb-8">
+      <a href="<%= url_for new_register_path %>" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition">Sign Up Now</a>
+      <a href="#" class="bg-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-md hover:bg-gray-600 transition">Demo Trading</a>
+    </div>
+    
+    <!-- Social Buttons -->
+    <div class="flex space-x-4">
+      <a href="https://google.com" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
+        <i class="fab fa-google text-lg"></i>
+      </a>
+      <a href="https://apple.com" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
+        <i class="fab fa-apple text-lg"></i>
+      </a>
+      <a href="https://telegram.com" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
+        <i class="fab fa-telegram-plane text-lg"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- News Ticker Section -->
+<section class="bg-gray-800 text-white py-2 mb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center space-x-4">
+    <!-- News Icon -->
+    <div>
+      <i class="fas fa-newspaper text-xl"></i>
+    </div>
+
+    <!-- Scrolling News Text -->
+    <div data-controller="news-ticker" class="overflow-hidden flex-1 whitespace-nowrap">
+      <div data-news-ticker-target="content" class="inline-block space-x-8">
+        <span>Breaking: Bitcoin surpasses $40,000!</span>
+        <span>Ethereum 2.0 launch successfully completed.</span>
+        <span>Regulatory news: New crypto rules in Europe.</span>
+        <span>Crypto adoption grows with major retail partnerships.</span>
+      </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div>
+      <i class="fas fa-arrow-right text-xl"></i>
+    </div>
+  </div>
+</section>
+
+<%= render partial: 'prices' %>
+
+<%= render partial: 'cards' %>
+
+<%= render partial: 'cards2' %>
+
+<%= render partial: 'countup' %>
+
+<%= render partial: 'faq' %>
+
+<%= render partial: 'bottom_offer' %>
+
+<%= render partial: 'infinite_slider' %>
