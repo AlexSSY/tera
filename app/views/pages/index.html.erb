@@ -15,13 +15,13 @@
     
     <!-- Social Buttons -->
     <div class="flex space-x-4">
-      <a href="https://google.com" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
+      <a href="<%= get_site_setting :google %>" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
         <i class="fab fa-google text-lg"></i>
       </a>
-      <a href="https://apple.com" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
+      <a href="<%= get_site_setting :apple %>" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
         <i class="fab fa-apple text-lg"></i>
       </a>
-      <a href="https://telegram.com" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
+      <a href="<%= get_site_setting :telegram %>" class="bg-gray-800 hover:bg-gray-700 w-[52px] justify-center text-gray-300 py-3 px-4 rounded-full flex items-center">
         <i class="fab fa-telegram-plane text-lg"></i>
       </a>
     </div>
@@ -39,10 +39,9 @@
     <!-- Scrolling News Text -->
     <div data-controller="news-ticker" class="overflow-hidden flex-1 whitespace-nowrap">
       <div data-news-ticker-target="content" class="inline-block space-x-8">
-        <span>Breaking: Bitcoin surpasses $40,000!</span>
-        <span>Ethereum 2.0 launch successfully completed.</span>
-        <span>Regulatory news: New crypto rules in Europe.</span>
-        <span>Crypto adoption grows with major retail partnerships.</span>
+        <% get_site_setting(:news).split("\n").each do |item| %>
+        <span><%= item %></span>
+        <% end %>
       </div>
     </div>
 

@@ -41,4 +41,8 @@ module ApplicationHelper
     end
     html << %(#{next_a(pagy, a)}</nav>)
   end
+
+  def get_site_setting(name)
+    SiteSetting.get name
+  end
 end

@@ -3,6 +3,12 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="counter"
 export default class extends Controller {
   static targets = ["stats", "number1", "number2", "number3", "number4"];
+  static values = {
+    change24hTradingVolume: Number, 
+    cryptocurrenciesListed: Number, 
+    registeredUsers: Number, 
+    supportedCountries: Number
+  }
   
   connect() {
     // IntersectionObserver configuration
@@ -23,10 +29,10 @@ export default class extends Controller {
   startCounting() {
     // Define your numbers
     const numbers = [
-      { target: this.number1Target, endValue: 5000000 },
-      { target: this.number2Target, endValue: 200 },
-      { target: this.number3Target, endValue: 100000 },
-      { target: this.number4Target, endValue: 150 }
+      { target: this.number1Target, endValue: this.change24hTradingVolumeValue },
+      { target: this.number2Target, endValue: this.cryptocurrenciesListedValue },
+      { target: this.number3Target, endValue: this.registeredUsersValue },
+      { target: this.number4Target, endValue: this.supportedCountriesValue }
     ];
 
     numbers.forEach(({ target, endValue }) => {

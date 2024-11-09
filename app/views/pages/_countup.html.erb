@@ -1,4 +1,11 @@
-<section class="py-12 bg-white mb-8" data-controller="counter">
+<section 
+  class="py-12 bg-white mb-8" 
+  data-controller="counter"
+  data-counter-change24h-trading-volume-value="<%= get_site_setting :change_24h_trading_volume %>"
+  data-counter-cryptocurrencies-listed-value="<%= get_site_setting :cryptocurrencies_listed %>"
+  data-counter-registered-users-value="<%= get_site_setting :registered_users %>"
+  data-counter-supported-countries-value="<%= get_site_setting :supported_countries %>"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Row 1: 4 Columns with Animated Numbers -->

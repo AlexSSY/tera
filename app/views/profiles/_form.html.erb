@@ -5,7 +5,7 @@
   <%= f.input :phone_number %>
   <%= f.input :address %>
   <% if current_user.avatar.attached? && !current_user.avatar.new_record? %>
-    <%= image_tag url_for(current_user.avatar), alt: "User Avatar" %>
+    <%= image_tag url_for(current_user.avatar), alt: "User Avatar", width: "200" %>
   <% else %>
     <p>No avatar uploaded.</p>
   <% end %>
