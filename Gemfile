@@ -58,6 +58,6 @@ gem "tailwindcss-rails", "~> 3.0"
 
 gem "simple_form", "~> 5.3"
 
-gem "pagy", "~> 9.2"
+gem "pagy", "~> 9.3"
 
 gem "view_component", "~> 3.20"
