@@ -54,7 +54,7 @@ end
 
 gem "pundit", "~> 2.4"
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 3.2"
 
 gem "simple_form", "~> 5.3"
 
